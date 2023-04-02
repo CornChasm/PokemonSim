@@ -1,0 +1,120 @@
+@font-face {
+  font-family: pokemon;
+  src: url(../fonts/pkmnfl.ttf);
+}
+html {
+  font-family: pokemon;
+}
+body {
+  background-color: #bbdbf7;
+}
+.pkmnChoose {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 800px;
+  background-color: #aec8de;
+  outline: 5px black solid;
+  overflow-y: scroll;
+}
+.pkmnGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 128px);
+  gap: 32px;
+}
+.pkmnGrid > div {
+  background-color: #ececec;
+  width: 128px;
+  height: 128px;
+  outline: 3px black solid;
+  background-image: url(../img/Gen1Opponent.png);
+  background-size: calc(1920 * 2px) calc(384 * 2px);
+  image-rendering: pixelated;
+}
+.pkmnGrid > div:not(:nth-child(n + 7)) {
+  margin-top: 32px;
+}
+.pkmnGrid > div:last-child {
+  margin-bottom: 32px;
+}
+.pkmnGrid > div {
+  margin-left: 32px;
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #6f95a9;
+}
+::-webkit-scrollbar-thumb {
+  background: #144567;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0b304a;
+}
+
+.descriptionBox {
+  outline: 5px black solid;
+  background-color: #aec8de;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-100%);
+  top: 50%;
+  height: 400px;
+  width: 350px;
+  font-size: 32px;
+}
+.descriptionBox > div:first-child {
+  font-size: 48px;
+  margin-top: 15px;
+}
+.descriptionBox > div {
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.setPokemon {
+  outline: 4px black solid;
+  background-color: #aec8de;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%);
+  top: 60%;
+  height: 100px;
+  width: 350px;
+  font-family: pokemon;
+  font-size: 48px;
+}
+.party {
+  display: grid;
+  row-gap: 15px;
+  position: absolute;
+  left: 30px;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 690px;
+}
+.partyPkmn {
+  outline: 2px #1a2e40 solid;
+  background-color: #aec8de;
+  width: 350px;
+  height: 100px;
+  transform: skewX(-10deg);
+  border-radius: 10px;
+}
+.imageSlot {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%) skewX(10deg);
+  top: 50%;
+}
+.textSlot {
+  position: absolute;
+  transform: translateY(-50%) skewX(10deg);
+  top: 50%;
+  font-size: 40px;
+  margin-left: 20px;
+}

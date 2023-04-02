@@ -1,0 +1,24 @@
+@font-face {
+  font-family: pokemon;
+  src: url(../fonts/pkmnfl.ttf);
+}
+html {
+  font-family: pokemon;
+}
+body {
+  background-color: #bbdbf7;
+}
+button {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  border-image-source: url(../img/border2.png);
+  border-image-width: 192px;
+  border-image-repeat: stretch;
+  border-image-slice: 64;
+  border-radius: 64px;
+  width: 400px;
+  height: 128px;
+  font-family: pokemon;
+  font-size: 48px;
+}

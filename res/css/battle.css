@@ -1,0 +1,18 @@
+html {
+  font-family: pokemon;
+  image-rendering: pixelated;
+  background-image: url(../img/backgroundtest.png);
+}
+body {
+  background-color: #bbdbf7;
+}
+.borderAround {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 800px;
+  background-color: white;
+  outline: 5px black solid;
+}
