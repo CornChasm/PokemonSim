@@ -61,7 +61,7 @@ function addToParty() {
     document.getElementById(
       `partyImage${currentEmptyPartySlot}`
     ).style.backgroundPositionY = `-${
-      64 * Math.floor(currentPokemonClicked / 30)
+      64 * (Math.ceil(currentPokemonClicked / 30)-1)
     }px`;
     partyArray[currentEmptyPartySlot] = pokemonStats[currentPokemonClicked];
     enemyPartyArray[currentEmptyPartySlot] =
