@@ -1,11 +1,99 @@
-!
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../res/css/battle.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <button onclick="openTab()">Type Chart</button>
+    <div class="party">
+      <div id="partyPkmn0">
+        <div id="partyText0" class="textSlot"></div>
+        <div id="partyImage0" class="imageSlot"></div>
+      </div>
+      <div id="partyPkmn1">
+        <div id="partyText1" class="textSlot"></div>
+        <div id="partyImage1" class="imageSlot"></div>
+      </div>
+      <div id="partyPkmn2">
+        <div id="partyText2" class="textSlot"></div>
+        <div id="partyImage2" class="imageSlot"></div>
+      </div>
+      <div id="partyPkmn3">
+        <div id="partyText3" class="textSlot"></div>
+        <div id="partyImage3" class="imageSlot"></div>
+      </div>
+      <div id="partyPkmn4">
+        <div id="partyText4" class="textSlot"></div>
+        <div id="partyImage4" class="imageSlot"></div>
+      </div>
+      <div id="partyPkmn5">
+        <div id="partyText5" class="textSlot"></div>
+        <div id="partyImage5" class="imageSlot"></div>
+      </div>
+    </div>
+    <div class="enemyParty">
+      <div id="enemyPartyPkmn0">
+        <div id="enemyPartyText0" class="textSlot"></div>
+        <div id="enemyPartyImage0" class="imageSlot"></div>
+      </div>
+      <div id="enemyPartyPkmn1">
+        <div id="enemyPartyText1" class="textSlot"></div>
+        <div id="enemyPartyImage1" class="imageSlot"></div>
+      </div>
+      <div id="enemyPartyPkmn2">
+        <div id="enemyPartyText2" class="textSlot"></div>
+        <div id="enemyPartyImage2" class="imageSlot"></div>
+      </div>
+      <div id="enemyPartyPkmn3">
+        <div id="enemyPartyText3" class="textSlot"></div>
+        <div id="enemyPartyImage3" class="imageSlot"></div>
+      </div>
+      <div id="enemyPartyPkmn4">
+        <div id="enemyPartyText4" class="textSlot"></div>
+        <div id="enemyPartyImage4" class="imageSlot"></div>
+      </div>
+      <div id="enemyPartyPkmn5">
+        <div id="enemyPartyText5" class="textSlot"></div>
+        <div id="enemyPartyImage5" class="imageSlot"></div>
+      </div>
+    </div>
+
+    <div class="borderAround">
+      <div class="textBoxes">
+        <div class="moveBorder">
+          <div class="moveBox">
+            <div id="move0"></div>
+            <div id="move1"></div>
+            <div id="move2"></div>
+            <div id="move3"></div>
+          </div>
+        </div>
+        <div class="infoBox">
+          <div class="moveBox">
+            <div class="category"></div>
+            <div class="bottomRow">
+              <div id="type"></div>
+              <div class="pp"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="playerPokemon"></div>
+      <div class="playerPokemonStats">
+        <div class="playerPokemonName"></div>
+        <div class="playerPokemonHP"></div>
+      </div>
+      <div id="enemyPokemon"></div>
+      <div class="enemyPokemonStats">
+        <div class="enemyPokemonName"></div>
+        <div class="enemyPokemonHP"></div>
+      </div>
+    </div>
+    <script src="../res/js/pokemonStats.js"></script>
+    <script src="../res/js/battle.js"></script>
+  </body>
 </html>

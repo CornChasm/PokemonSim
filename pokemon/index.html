@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../res/css/pokemon.css" />
-    <title>Document</title>
+    <title>Choose your pokemon</title>
   </head>
   <body>
     <div class="party">
@@ -37,9 +37,6 @@
     <div class="pkmnChoose">
       <div class="pkmnGrid"></div>
     </div>
-    <div></div>
-    <script src="../res/js/pokemonStats.js"></script>
-    <script src="../res/js/pokemon.js"></script>
     <div class="descriptionBox">
       <div class="name"></div>
       <div class="hp"></div>
@@ -49,7 +46,19 @@
       <div class="sp_defense"></div>
       <div class="speed"></div>
       <div class="total"></div>
+      <div class="types">
+        <div id="type1"></div>
+        <div id="type2"></div>
+      </div>
     </div>
-    <button class="setPokemon" onclick="addToParty()">Add to Party</button>
+    <button class="blueButton setPokemon" onclick="addToParty()">
+      Add to Party
+    </button>
+    <button onclick="nextButton()" class="next">Choose Moves</button>
+    <button onclick="window.location.href='../help'" class="blueButton help">
+      Help
+    </button>
+    <script src="../res/js/pokemonStats.js"></script>
+    <script src="../res/js/pokemon.js"></script>
   </body>
 </html>

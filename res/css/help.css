@@ -8,17 +8,111 @@ html {
 body {
   background-color: #bbdbf7;
 }
-button {
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #aec8de;
+}
+::-webkit-scrollbar-thumb {
+  background: #144567;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0b304a;
+}
+.next {
   position: absolute;
-  right: 50px;
-  bottom: 50px;
+  right: 30px;
+  transform: translateY(-50%);
+  top: calc(60% + 250px);
   border-image-source: url(../img/border2.png);
   border-image-width: 192px;
   border-image-repeat: stretch;
   border-image-slice: 64;
   border-radius: 64px;
-  width: 400px;
+  width: 350px;
   height: 128px;
   font-family: pokemon;
-  font-size: 48px;
+  font-size: 44px;
+}
+.pkmnChoose {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 800px;
+  background-color: white;
+  outline: 5px black solid;
+  overflow-y: scroll;
+}
+.party {
+  position: absolute;
+  left: 30px;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 690px;
+  width: 350px;
+  background-color: #aec8de;
+  outline: 2px #1a2e40 solid;
+}
+.pTitle {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+}
+.pText {
+  width: 420px;
+  margin-left: 15px;
+  margin-top: -25px;
+  font-size: 28px;
+}
+.centerTextBox {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 492px);
+}
+.centerTextBox > div {
+  border: 3px black solid;
+  padding-left: 25px;
+}
+.centerTextBox > div:nth-child(2n-1) {
+  border-left: none;
+}
+.centerTextBox > div:nth-child(2n) {
+  border-right: none;
+}
+.centerTextBox > div:not(:nth-child(n + 3)) {
+  border-top: none;
+}
+.centerTextBox > div:nth-child(n + 7) {
+  border-bottom: none;
+}
+.pText > div > div {
+  position: absolute;
+  background-image: url(../img/TypesEffectsAttacks.png);
+  background-size: 2720px 224px;
+  background-position: 0px -176px;
+  width: 96px;
+  height: 48px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+.moveCats {
+  display: grid;
+  grid-template-columns: 96px auto;
+}
+.calibration {
+  width: 350px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.pTextParty {
+  margin-left: 15px;
+  margin-top: -25px;
+  font-size: 28px;
 }

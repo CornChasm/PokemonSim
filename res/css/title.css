@@ -9,7 +9,7 @@ html {
 body {
   background-color: rgb(187, 219, 247);
 }
-div {
+.title {
   width: 740px;
   position: absolute;
   transform: translate(-50%);
@@ -32,4 +32,20 @@ button {
   height: 128px;
   font-family: pokemon;
   font-size: 48px;
+}
+.calibration {
+  width: 350px;
+  position: absolute;
+  transform: translate(-50%);
+  left: 20%;
+  bottom: 15%;
+}
+.pTitle {
+  font-size: 34px;
+  text-align: center;
+}
+.pText {
+  margin-top: -25px;
+  margin-left: 15px;
+  font-size: 26px;
 }

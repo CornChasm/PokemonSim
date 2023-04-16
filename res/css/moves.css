@@ -4,11 +4,12 @@
 }
 html {
   font-family: pokemon;
+  user-select: none;
 }
 body {
   background-color: #bbdbf7;
 }
-.pkmnChoose {
+.moveChoose {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -19,28 +20,42 @@ body {
   outline: 5px black solid;
   overflow-y: scroll;
 }
-.pkmnGrid {
+.moveGrid {
   display: grid;
-  grid-template-columns: repeat(6, 128px);
-  gap: 32px;
+  grid-template-columns: 332px 300px 332px;
+  gap: 16px;
 }
-.pkmnGrid > div {
+.moveGrid > div {
   background-color: #ececec;
-  width: 128px;
-  height: 128px;
   outline: 3px black solid;
-  background-image: url(../img/Gen1Opponent.png);
-  background-size: calc(1920 * 2px) calc(384 * 2px);
+  height: 48px;
   image-rendering: pixelated;
+  font-size: 32px;
+  padding-left: 15px;
+  line-height: 48px;
 }
-.pkmnGrid > div:not(:nth-child(n + 7)) {
+.moveGrid > div:not(:nth-child(n + 4)) {
   margin-top: 32px;
 }
-.pkmnGrid > div:last-child {
+.moveGrid > div:last-child {
   margin-bottom: 32px;
 }
-.pkmnGrid > div {
+.moveGrid > div:nth-child(3n + 1) {
   margin-left: 32px;
+}
+.moveGrid > div:nth-child(3n) {
+  margin-right: 32px;
+}
+.moveGrid > div > div {
+  width: 80px;
+  height: 24px;
+  background-image: url(../img/TypesEffectsAttacks.png);
+  background-size: 1360px 112px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: relative;
+  left: 200px;
+  bottom: 36px;
 }
 ::-webkit-scrollbar {
   width: 16px;
@@ -67,19 +82,18 @@ body {
   font-size: 32px;
 }
 .descriptionBox > div:first-child {
-  font-size: 48px;
+  font-size: 40px;
   margin-top: 15px;
 }
 .descriptionBox > div {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 5px;
 }
-.types {
-  position: absolute;
-  right: 8px;
-  top: 12px;
+.description {
+  margin-right: 30px;
+  font-size: 28px;
 }
-.types > div {
+#type1 {
   background-image: url(../img/TypesEffectsAttacks.png);
   background-size: 1360px 112px;
   background-repeat: no-repeat;
@@ -88,22 +102,25 @@ body {
   height: 24px;
   margin-top: 4px;
   display: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
 }
 .blueButton {
+  position: absolute;
   outline: 4px black solid;
   background-color: #aec8de;
-  position: absolute;
   height: 100px;
   width: 350px;
   font-family: pokemon;
   font-size: 48px;
 }
-.setPokemon {
+.setMoves {
   right: 30px;
   transform: translateY(-50%);
   top: 60%;
 }
-.help {
+.randomMoves {
   right: 30px;
   transform: translateY(-50%);
   top: calc(60% + 120px);
@@ -117,7 +134,7 @@ body {
   top: 50%;
   height: 690px;
 }
-.partyPkmn {
+div[id*="partyPkmn"] {
   outline: 3px #1a2e40 solid;
   background-color: #aec8de;
   width: 350px;
@@ -154,4 +171,9 @@ body {
   height: 128px;
   font-family: pokemon;
   font-size: 44px;
+}
+.category {
+  position: absolute;
+  right: 10px;
+  top: 60px;
 }

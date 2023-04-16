@@ -1,7 +1,10 @@
+@font-face {
+  font-family: pokemon;
+  src: url(../fonts/pkmnfl.ttf);
+}
 html {
   font-family: pokemon;
-  image-rendering: pixelated;
-  background-image: url(../img/backgroundtest.png);
+  user-select: none;
 }
 body {
   background-color: #bbdbf7;
@@ -14,5 +17,203 @@ body {
   width: 1000px;
   height: 800px;
   background-color: white;
+  background-image: url(../img/battlebg.png);
   outline: 5px black solid;
+}
+.party {
+  display: grid;
+  row-gap: 15px;
+  position: absolute;
+  left: 30px;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 690px;
+}
+.party > div[id*="partyPkmn"] {
+  outline: 3px #1a2e40 solid;
+  background-color: #aec8de;
+  width: 350px;
+  height: 100px;
+  transform: skewX(-10deg);
+  border-radius: 10px;
+}
+.party > div[id*="partyPkmn"] > .imageSlot {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%) skewX(10deg);
+  top: 50%;
+}
+.party > div[id*="partyPkmn"] > .textSlot {
+  position: absolute;
+  transform: translateY(-50%) skewX(10deg);
+  top: 50%;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.enemyParty {
+  display: grid;
+  row-gap: 15px;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 690px;
+}
+.enemyParty > div[id*="PartyPkmn"] {
+  outline: 3px #1a2e40 solid;
+  background-color: #aec8de;
+  width: 350px;
+  height: 100px;
+  transform: skewX(10deg);
+  border-radius: 10px;
+}
+.enemyParty > div[id*="PartyPkmn"] > .imageSlot {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: 30px;
+  transform: translateY(-50%) skewX(-10deg);
+  top: 50%;
+}
+.enemyParty > div[id*="PartyPkmn"] > .textSlot {
+  position: absolute;
+  transform: translateY(-50%) skewX(-10deg);
+  top: 50%;
+  font-size: 40px;
+  right: 0px;
+  margin-right: 20px;
+}
+
+.textBoxes {
+  background-color: #293131;
+  position: absolute;
+  width: 1000px;
+  height: 240px;
+  bottom: 0px;
+}
+.moveBorder,
+.infoBox {
+  height: 240px;
+  image-rendering: pixelated;
+  border-image-source: url(../img/border2.png);
+  border-image-width: 192px;
+  border-image-repeat: stretch;
+  border-image-slice: 64;
+  border-radius: 64px;
+  background-color: white;
+}
+.moveBorder {
+  width: 650px;
+  position: absolute;
+  left: 0px;
+}
+.moveBox {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  gap: 32px;
+}
+.moveBox > div {
+  width: 240px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+  font-size: 40px;
+}
+.infoBox {
+  width: 350px;
+  position: absolute;
+  right: 0px;
+}
+.infoBox > div {
+  grid-template-columns: auto;
+}
+.bottomRow > div {
+  transform: translate(0, -50%);
+}
+#type {
+  position: relative;
+  top: 50%;
+  width: 160px;
+  height: 48px;
+  background-image: url(../img/TypesEffectsAttacks.png);
+  background-size: 2720px 224px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  left: -16px;
+  display: none;
+}
+.pp {
+  position: absolute;
+  top: calc(50% + 50px);
+  right: -16px;
+}
+
+#playerPokemon {
+  width: 256px;
+  height: 256px;
+  background-image: url(../img/Gen1Player.png);
+  background-size: calc(1920 * 4px) calc(384 * 4px);
+  image-rendering: pixelated;
+  position: absolute;
+  bottom: 240px;
+  left: 196px;
+}
+#enemyPokemon {
+  width: 256px;
+  height: 256px;
+  background-image: url(../img/Gen1Opponent.png);
+  background-size: calc(1920 * 4px) calc(384 * 4px);
+  image-rendering: pixelated;
+  position: absolute;
+  right: 128px;
+  top: 120px;
+}
+.playerPokemonStats,
+.enemyPokemonStats {
+  width: 320px;
+  height: 180px;
+  position: absolute;
+  image-rendering: pixelated;
+  border-image-source: url(../img/border1.png);
+  border-image-width: 192px;
+  border-image-repeat: stretch;
+  border-image-slice: 64;
+  border-radius: 64px;
+  background-color: #ded6de;
+  text-align: center;
+  font-size: 40px;
+}
+.playerPokemonStats {
+  right: 96px;
+  bottom: 240px;
+}
+.enemyPokemonStats {
+  left: 164px;
+  top: 96px;
+}
+.playerPokemonName,
+.enemyPokemonName {
+  margin-top: 32px;
+}
+.playerPokemonHP,
+.enemyPokemonHP {
+  margin-top: 16px;
+}
+button {
+  width: 350px;
+  height: 48px;
+  font-size: 40px;
+  font-family: pokemon;
+  left: 30px;
+  position: absolute;
+  transform: translateY(50%);
+  bottom: calc(50% + 380px);
 }

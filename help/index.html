@@ -5,9 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../res/css/help.css" />
-    <title>Document</title>
+    <title>REEEEEEAD</title>
   </head>
   <body>
-    <button onclick="window.location.href='../pokemon'">Choose Pokemon</button>
+    <div class="party">
+      <div class="calibration">
+        <p class="pTitle">Size Calibration</p>
+        <p class="pTextParty">
+          Adjust the window size/zoom on the next page until it fits both the
+          button on the right side and the box on the left side
+        </p>
+      </div>
+    </div>
+    <button onclick="window.location.href='../pokemon'" class="next">
+      Choose Pokemon
+    </button>
+    <div class="pkmnChoose">
+      <div class="centerTextBox">
+        <div>
+          <p class="pTitle">Party Box</p>
+          <p class="pText">
+            The party box is on the left side of the screen, it shows your
+            chosen pokemon, during the battle phase, the enemy party box will be
+            shown on the right side of the screen
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Game/Center Box</p>
+          <p class="pText">
+            This is where choosing pokemon, choosing moves and battling takes
+            place, it was designed to resemble old pokemon games so it has a set
+            size across all pages
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Choosing Pokemon</p>
+          <p class="pText">
+            You choose pokemon by clicking on them and clicking "Add To Party",
+            after choosing 6 pokemon you go back to the first party slot, where
+            you can change your choices
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Choosing Moves</p>
+          <p class="pText">
+            You choose moves by first clicking on a party pokemon, then on a
+            move you want to add and clicking "Add to Moveset", it cycles the
+            same way as choosing pokemon
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Pokemon Types</p>
+          <p class="pText">
+            Pokemon can have (in this simulator) 17 different types, they can
+            either be Super Effective(2x), Not Very Effective(0.5x) or
+            Immune(0x) against each other
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Move Types</p>
+          <p class="pText">
+            Moves can have the same types as pokemon, their effectiveness
+            against a pokemon is shown during battle
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">Move Categories</p>
+          <p class="pText">
+            Moves are divided into 3 categories
+            <br />
+            Physical - ATK and DEF<br />
+            Special - SPATK and SPDEF<br />
+            Status - give effects to pokemon (ATK UP, DEF DOWN, BURN etc.)<br />
+          </p>
+        </div>
+        <div>
+          <p class="pTitle">STAB moves</p>
+          <p class="pText">
+            Moves that have the same type as the pokemon get an additional 0.5x
+            increase in ATK/SPATK
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
